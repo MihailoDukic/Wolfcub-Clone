@@ -1,0 +1,148 @@
+.main-space {
+
+    .showcase-one,
+    .showcase-two {
+        margin: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-grid {
+        @include projectWidth();
+        margin: 5rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'img1 img2''img3 img3';
+        gap: 40px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .img1 {
+            grid-area: img1;
+        }
+
+        .img2 {
+            grid-area: img2;
+        }
+
+        .img3 {
+            grid-area: img3;
+        }
+    }
+
+    .showcase-three,
+    .showcase-four {
+        margin: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-grid-two {
+        @include projectWidth;
+        margin: 5rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas: 'img1 img1''img2 img2''img3 img3';
+        align-items: center;
+        gap: 40px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .img1 {
+            grid-area: img1;
+
+        }
+
+        .img2 {
+            grid-area: img2;
+
+        }
+
+        .img3 {
+            grid-area: img3;
+
+        }
+
+
+    }
+
+    .showcase-grid-three {
+        @include projectWidth;
+        margin: 5rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas: 'img1 img1 img1''img2 img2 img3';
+        align-items: center;
+        gap: 40px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+
+
+        .img1 {
+            grid-area: img1;
+
+        }
+
+        .img2 {
+            grid-area: img2;
+
+        }
+
+        .img3 {
+            grid-area: img3;
+
+        }
+    }
+
+    .showcase-three,
+    .showcase--five,
+    .showcase-seven {
+        background: $project-bg9;
+        padding: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+            @include projectWidth();
+            display: block;
+            margin: 5rem auto;
+        }
+    }
+
+    .showcase-four {
+
+        img {
+            width: 100%;
+            height: auto;
+            @include projectWidth();
+            display: block;
+            margin: 5rem auto;
+        }
+    }
+
+    .showcase-five {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+}

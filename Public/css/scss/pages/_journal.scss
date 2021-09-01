@@ -1,0 +1,227 @@
+.header-journal {
+    height: auto;
+    background: none;
+}
+
+/* JOURNAL PAGE */
+
+.main {
+    .journal-links {
+        @include maxWidth();
+
+        .heading {
+            @include global-heading();
+            color: $clr01;
+        }
+
+        &__content {
+            &__filter-list {
+                margin-top: 5rem;
+
+                span {
+                    padding-right: 50px;
+                    cursor: pointer;
+                    @include filters();
+                    font-weight: normal;
+                    display: inline-block;
+                }
+            }
+
+            /* active state */
+
+            /* Hide and show classes */
+
+
+            .active {
+                color: $clr01;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -10px;
+                    background: $clr07;
+                    width: 45%;
+                    height: 3px;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: -10px;
+                    background: $clr07;
+                    width: 45%;
+                    height: 3px;
+                }
+            }
+
+            .show {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .hide {
+                transform: scale(0.9);
+                filter: grayscale(100%);
+                filter: blur(4px);
+                display: none;
+                transition: all .4s ease-in-out;
+            }
+
+
+            /* Blogs */
+
+            &__blogs {
+                margin-top: 10rem;
+                position: relative;
+
+                .blog-flex {
+                    @include flexbox(space-between, center);
+                    flex-wrap: wrap;
+                    margin-bottom: 4rem;
+
+                    .blog {
+
+                        a {
+                            text-decoration: none;
+                        }
+
+                        background: #fff;
+                        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+                        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+                        width: 48%;
+                        margin-bottom: 4rem;
+
+                        .top-showcase {
+                            width: 100%;
+                            height: 45vh;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        .top-description {
+                            padding: 2rem;
+
+                            h2 {
+                                @include blog-heading();
+                            }
+
+                            p {
+                                @include blog-author();
+                                margin-top: 1.5rem;
+
+                                span {
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .blog:hover {
+                        filter: opacity(50%);
+                        filter: blur(2px);
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+/* Breakpoints */
+
+@media screen and (max-width: 1000px) {
+    .main-journal {
+        .journal-links {
+            padding: $padding;
+
+            &__content {
+                &__filter-list {
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    width: 100%;
+                    height: auto;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .main-journal {
+        .journal-links {
+            padding: $padding;
+            max-width: 100%;
+            width: 100%;
+
+            &__content {
+                &__filter-list {
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    width: 100%;
+                    height: auto;
+                    white-space: nowrap;
+                }
+
+                &__blogs {
+                    .blog-flex {
+                        @include flexbox(center, center);
+                        flex-wrap: wrap;
+                        flex-direction: column;
+
+                        .blog {
+                            width: 100%;
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .main-journal {
+        .journal-links {
+            padding: 0 2rem;
+            max-width: 100%;
+            width: 100%;
+
+            &__content {
+                &__filter-list {
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    width: 100%;
+                    height: auto;
+                    white-space: nowrap;
+                }
+
+                &__blogs {
+                    .blog-flex {
+                        @include flexbox(center, center);
+                        flex-wrap: wrap;
+                        flex-direction: column;
+
+                        .blog {
+                            width: 100%;
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+}

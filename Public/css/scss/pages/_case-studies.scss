@@ -1,0 +1,327 @@
+/* Header reset */
+
+.header-cs {
+    background: transparent;
+    height: auto;
+
+    .cs-showcase {
+        background: transparent;
+        text-align: center;
+
+
+        p {
+            @include cs-header-sub();
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            @include cs-header-showcase();
+        }
+    }
+}
+
+
+/* MAIN CONTENT */
+
+.main {
+    .brand {
+        width: 100%;
+        height: 80vh;
+        background-size: cover;
+        background-position: center center;
+
+        &__content {
+            @include maxWidth();
+            @include flexbox(center, start);
+            height: 100%;
+            flex-direction: column;
+
+            span {
+                @include cs-span(#fff);
+
+            }
+
+            h2 {
+                @include cs-header(#fff);
+                margin: 1.5rem 0;
+            }
+
+        }
+
+        .content-01 {
+            span {
+                @include cs-span(#fff);
+                display: inline-block;
+
+                .num-clr {
+                    color: $cs-clr01;
+                    font-weight: bold;
+                }
+            }
+
+            .link {
+                @include button(#fff, $cs-clr01, transparent, 3px solid $cs-clr01);
+
+                &:hover {
+                    background: $cs-clr01;
+                }
+            }
+        }
+
+        .content-02 {
+            span {
+                @include cs-span(#282828);
+                display: inline-block;
+
+                .num-clr {
+                    color: $cs-clr02;
+                    font-weight: bold;
+                }
+            }
+
+            h2 {
+                color: #282828;
+            }
+
+            .link {
+                @include button($cs-clr02, $cs-clr02, transparent, 3px solid $cs-clr02);
+                color: $cs-clr02;
+
+                &:hover {
+                    background: $cs-clr02;
+                    color: #fff;
+                }
+            }
+        }
+
+        .content-03 {
+            span {
+                @include cs-span(#fff);
+                display: inline-block;
+
+                .num-clr {
+                    color: $cs-clr03;
+                    font-weight: bold;
+                }
+            }
+
+            h2 {
+                color: #fff;
+            }
+
+            .link {
+                @include button($cs-clr03, $cs-clr03, transparent, 3px solid $cs-clr03);
+                color: $cs-clr03;
+
+                &:hover {
+                    background: $cs-clr03;
+                    color: #fff;
+                }
+            }
+        }
+
+        .content-04 {
+            span {
+                @include cs-span(#282828);
+                display: inline-block;
+
+                .num-clr {
+                    color: $cs-clr04;
+                    font-weight: bold;
+                }
+            }
+
+            h2 {
+                color: #282828;
+            }
+
+            .link {
+                @include button($cs-clr04, $cs-clr04, transparent, 3px solid $cs-clr04);
+                color: $cs-clr04;
+
+                &:hover {
+                    background: $cs-clr04;
+                    color: #fff;
+                }
+            }
+        }
+
+        .content-05 {
+            span {
+                @include cs-span(#fff);
+                display: inline-block;
+
+                .num-clr {
+                    color: $cs-clr05;
+                    font-weight: bold;
+                }
+            }
+
+            h2 {
+                color: #fff;
+            }
+
+            .link {
+                @include button($cs-clr05, $cs-clr05, transparent, 3px solid $cs-clr05);
+                color: $cs-clr05;
+
+                &:hover {
+                    background: $cs-clr05;
+                    color: #fff;
+                }
+            }
+        }
+
+        .content-07 {
+            span {
+                @include cs-span(#fff);
+                display: inline-block;
+
+                .num-clr {
+                    color: $cs-clr06;
+                    font-weight: bold;
+                }
+            }
+
+            h2 {
+                color: #fff;
+            }
+
+            .link {
+                @include button($cs-clr06, $cs-clr06, transparent, 3px solid $cs-clr06);
+                color: $cs-clr06;
+
+                &:hover {
+                    background: $cs-clr06;
+                    color: #fff;
+                }
+            }
+        }
+
+        .content-06 {
+            span {
+                @include cs-span(#fff);
+                display: inline-block;
+
+                .num-clr {
+                    color: $cs-clr07;
+                    font-weight: bold;
+                }
+            }
+
+            h2 {
+                color: #fff;
+            }
+
+            .link {
+                @include button($cs-clr07, $cs-clr07, transparent, 3px solid $cs-clr07);
+                color: $cs-clr07;
+
+                &:hover {
+                    background: $cs-clr07;
+                    color: #fff;
+                }
+            }
+        }
+
+        .content-08 {
+            span {
+                @include cs-span(#fff);
+                display: inline-block;
+
+                .num-clr {
+                    color: $cs-clr09;
+                    font-weight: bold;
+                }
+            }
+
+            h2 {
+                color: #fff;
+            }
+
+            .link {
+                @include button($cs-clr09, $cs-clr09, transparent, 3px solid $cs-clr09);
+                color: $cs-clr09;
+
+                &:hover {
+                    background: $cs-clr09;
+                    color: #fff;
+                }
+            }
+        }
+
+        .content-09 {
+            span {
+                @include cs-span(#fff);
+                display: inline-block;
+
+                .num-clr {
+                    color: $cs-clr10;
+                    font-weight: bold;
+                }
+            }
+
+            h2 {
+                color: #fff;
+            }
+
+            .link {
+                @include button($cs-clr10, $cs-clr10, transparent, 3px solid $cs-clr10);
+                color: $cs-clr10;
+
+                &:hover {
+                    background: $cs-clr10;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and(max-width: 1000px) {
+    .main-cs {
+        .brand {
+            padding: $padding;
+        }
+    }
+}
+
+
+@media screen and(max-width: 500px) {
+    .header-cs {
+        margin-bottom: 0;
+
+        .cs-showcase {
+            background: transparent;
+            text-align: center;
+
+
+            p {
+                @include cs-header-sub();
+                padding-bottom: 1rem;
+            }
+
+            h2 {
+                @include cs-header-showcase();
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .main-cs {
+
+
+        .brand {
+            background-size: cover;
+            background-position: 50% 50%;
+
+            &__content {
+                h2 {
+                    font-size: 1.5rem;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+}

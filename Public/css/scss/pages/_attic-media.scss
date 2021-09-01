@@ -1,0 +1,127 @@
+.header-attic {
+    height: 75vh;
+    background-position: center center;
+}
+
+.main-attic {
+
+    .showcase-one,
+    .showcase-two {
+        width: 100%;
+        height: auto;
+        margin: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-grid {
+        @include projectWidth();
+        margin: 5rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'img1 img2''img3 img3';
+        gap: 40px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .img1 {
+            grid-area: img1;
+        }
+
+        .img2 {
+            grid-area: img2;
+        }
+
+        .img3 {
+            grid-area: img3;
+        }
+    }
+
+    .showcase-three {
+        margin: 5rem 0;
+    }
+
+    .showcase-four {
+        margin: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-six,
+    .showcase-seven,
+    .showcase-eight,
+    .showcase-eleven {
+        @include projectWidth();
+        margin: 5rem auto;
+
+        .heading-showcase {
+            @include showcase-header;
+            margin-bottom: 5rem;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-nine {
+        @include projectWidth();
+        margin: 5rem auto;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-ten {
+        .showcase-inner {
+            background-color: $project-bg5;
+
+            img {
+                @include projectWidth();
+                margin: 5rem auto;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .showcase-grid-two {
+        @include projectWidth();
+        margin: 5rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+        grid-template-areas: 'img1 img1 img1''img2 img2 img3';
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .img1 {
+            grid-area: img1;
+        }
+
+        .img2 {
+            grid-area: img2;
+        }
+
+        .img3 {
+            grid-area: img3;
+        }
+
+
+    }
+}

@@ -1,0 +1,85 @@
+.main-cloisall {
+    .showcase-one {
+        margin: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .showcase-two {
+        @include projectWidth();
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-three {
+        @include projectWidth();
+        margin: 5rem auto;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-four {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-five {
+        max-width: 100%;
+        margin: 5rem auto;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .showcase-six,
+        {
+        max-width: 100%;
+        margin: 5rem auto;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .showcase-seven,
+    .showcase-eight {
+        background: $project-bg3;
+
+        img {
+            width: 100%;
+            height: auto;
+            @include projectWidth();
+            margin: 5rem auto;
+            display: block;
+        }
+    }
+
+    .showcase-nine {
+        @include projectWidth();
+        margin: 5rem auto;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}

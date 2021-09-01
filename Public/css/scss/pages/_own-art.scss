@@ -1,0 +1,137 @@
+.main-art {
+    .showcase-one {
+        background: $project-bg4;
+        padding: 2.5rem 0;
+        margin: 5rem auto;
+
+        img {
+            width: 15%;
+            height: auto;
+            display: block;
+            @include projectWidth();
+            text-align: center;
+            margin: 5rem auto;
+        }
+    }
+
+    .showcase-two {
+        width: 100%;
+        height: auto;
+        margin: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-grid-one {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'img1 img2'
+            'img3 img3'
+            'img4 img4'
+        ;
+        grid-gap: 40px;
+
+        justify-content: center;
+        @include projectWidth();
+        margin: 5rem auto;
+
+        img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        .img1 {
+            grid-area: img1;
+        }
+
+        .img2 {
+            grid-area: img2;
+        }
+
+        .img3 {
+            grid-area: img3;
+        }
+
+        .img4 {
+            grid-area: img4;
+        }
+    }
+
+    .showcase-three {
+        img {
+            width: 100%;
+            height: auto;
+            @include projectWidth();
+            margin: 5rem auto;
+            display: block;
+        }
+    }
+
+    .showcase-four {
+        background: $project-bg3;
+        margin: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+            @include projectWidth();
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    .showcase-five {
+        @include projectWidth();
+        margin: 5rem auto;
+
+        video {
+            display: block;
+            text-align: center;
+            @include projectWidth();
+            margin: 5rem auto;
+            width: 60%;
+            height: auto;
+        }
+    }
+
+    .showcase-seven,
+    .showcase-eight {
+        margin: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-nine {
+        background: $project-bg4;
+
+        img {
+            width: 100%;
+            height: auto;
+            @include projectWidth();
+            margin: 5rem auto;
+            display: block;
+        }
+    }
+
+    .showcase-ten {
+        img {
+            width: 100%;
+            height: auto;
+            @include projectWidth();
+            margin: 5rem auto;
+            display: block;
+        }
+    }
+
+    .showcase-eleven {
+        max-width: 100%;
+        margin: 5rem 0;
+    }
+}

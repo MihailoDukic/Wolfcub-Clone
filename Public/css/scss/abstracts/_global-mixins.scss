@@ -1,0 +1,40 @@
+@mixin flexbox($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($min, $max, $justify, $align) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($min, $max));
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin linkReset($clr) {
+    text-decoration: none;
+    color: $clr;
+}
+
+@mixin maxWidth() {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+@mixin maxWidthInner() {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@mixin maxWidthInnerContent() {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@mixin global-heading() {
+    font-size: 55px;
+    font-weight: 700;
+    color: #282828;
+    font-family: 'Playfair Display', serif;
+}

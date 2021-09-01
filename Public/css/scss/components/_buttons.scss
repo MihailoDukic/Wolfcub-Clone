@@ -1,0 +1,16 @@
+@mixin button($clrtxt, $clr, $bg, $border) {
+    border: $border;
+    color: $clr;
+    background: $bg;
+    padding: 20px 45px;
+    font-weight: bold;
+    @include linkReset(#fff);
+    border-radius: 8px;
+    margin-top: 1rem;
+    display: inline-block;
+
+    &:hover {
+        background: #fff;
+        color: $clrtxt;
+    }
+}

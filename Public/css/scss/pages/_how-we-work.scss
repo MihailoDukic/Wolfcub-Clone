@@ -1,0 +1,289 @@
+/* HOW WE WORK */
+
+.testimonial-hww {
+    margin-top: 0;
+}
+
+/* Head reset */
+
+.hww-header {
+    height: 100%;
+    background: none;
+    overflow-y: none;
+
+    .hww-showcase {
+        @include maxWidthInner();
+        text-align: center;
+        height: auto;
+
+
+        .heading {
+            @include hww-showcase-heading();
+            margin-bottom: 3rem;
+
+        }
+
+        .p-bold {
+            @include hww-showcase-p-bold();
+            margin-bottom: 1.5rem;
+            color: #282828;
+        }
+
+        .p-light {
+            @include hww-showcase-p-light();
+            margin-bottom: 1.5rem;
+            color: #282828;
+        }
+
+        .sub-heading {
+            @include hww-showcase-sub-heading();
+            margin: 4rem 0;
+        }
+    }
+
+}
+
+/* HOW WE WORK */
+
+.main {
+    margin-top: 5rem;
+
+    .how-we-work {
+        width: 100%;
+        height: 85vh;
+
+        &__content {
+            @include flexbox(space-between, center);
+            height: 100%;
+            width: 100%;
+            position: relative;
+            @include maxWidth();
+
+
+
+            &__description,
+            &__showcase {
+                width: 50%;
+            }
+
+            &__description {
+                h2 {
+                    @include hww-heading($clr05);
+                    margin-bottom: 4rem;
+                    position: relative;
+                    display: inline-block;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: -30px;
+                        left: 0;
+                        width: 80%;
+                        height: 5px;
+                        background: $clr02;
+                    }
+                }
+
+                .bold {
+                    @include hww-p-bold($clr05);
+                    margin-bottom: 1.5rem;
+                }
+
+                .lighter {
+                    @include hww-p-light($clr05);
+                    margin-bottom: 2rem;
+                }
+
+                .work-list {
+                    @include hww-list($clr05);
+
+                    li {
+                        padding: 5px 0;
+                        font-weight: normal;
+
+
+                        span {
+                            font-weight: 300;
+                            margin-right: 0.5rem;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+
+            &__showcase {
+                @include flexbox(space-between, center);
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .list {
+                    position: absolute;
+                    top: 5%;
+                    right: 5%;
+                    @include flexbox(center, center);
+                    flex-direction: column;
+
+                    span {
+                        font-weight: bold;
+                    }
+
+                    .underline-num {
+                        position: relative;
+                        margin-top: 0.4rem;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: 18px;
+                            width: 100%;
+                            height: 3px;
+                            background: $clr01;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /* Background colors */
+
+    .work-one {
+        background: $clr04;
+    }
+
+    .work-two {
+        h2:before {
+            background: $clr02;
+        }
+
+        .work-list {
+            background-color: none;
+        }
+    }
+
+
+    .work-three {
+        background: $clr02;
+
+        .underline-num {
+            position: relative;
+            margin-top: 0.4rem;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 18px;
+                width: 100%;
+                height: 3px;
+
+            }
+        }
+
+        h2,
+        .bold,
+        .lighter {
+            color: #fff;
+        }
+
+        h2:before {
+            background: $clr04;
+        }
+
+        .work-list {
+            color: $clr04;
+        }
+
+    }
+
+    .work-four {
+        h2:before {
+            background: $clr02;
+        }
+
+        .work-list {
+            color: $clr04;
+        }
+    }
+}
+
+
+/* Breakpoints */
+
+@media (max-width: 1000px) {
+    .main-hww {
+        .how-we-work {
+            padding: 5rem 8rem;
+            height: auto;
+            width: 100%;
+
+            &__content {
+
+                flex-wrap: reverse-wrap;
+                flex-direction: column;
+                width: 100%;
+                max-width: 100%;
+
+                &__description,
+                &__showcase {
+                    width: 100%;
+                    max-width: 100%;
+
+                    .bold,
+                    .lighter {
+                        max-width: 100%;
+                    }
+                }
+
+                &__description {
+                    @include flexbox(start, start);
+                    flex-direction: column;
+                    text-align: left;
+                }
+
+
+                &__showcase {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .hww-header {
+        .hww-showcase {
+            text-align: left;
+
+            .heading {
+                font-size: 3rem;
+
+            }
+        }
+    }
+
+    .main-hww {
+        .how-we-work {
+            padding: 5rem 4rem;
+            height: auto;
+            width: 100%;
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    .main-hww {
+        .how-we-work {
+            padding: 5rem 2rem;
+            height: auto;
+            width: 100%;
+        }
+    }
+}

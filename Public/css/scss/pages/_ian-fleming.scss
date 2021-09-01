@@ -1,0 +1,384 @@
+.main {
+    .showcase {
+        margin-top: 5rem;
+
+        .showcase-one {
+            width: 100%;
+            height: auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .showcase-two {
+            width: 100%;
+            height: auto;
+            @include maxWidth();
+            margin: 4rem auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .showcase-description-one,
+        .showcase-description-two,
+        .showcase-description-three,
+        .showcase-description-five {
+            @include projectWidth();
+            margin: 0 auto;
+            margin-top: 10rem;
+            @include flexbox(space-between, start);
+
+            &__heading {
+                h2 {
+                    @include case-content-heading();
+                    text-align: center;
+                    display: inline-block;
+                }
+            }
+
+            &__description {
+                max-width: 40%;
+                margin: 0 auto;
+
+                p {
+                    @include project-p;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+
+        .showcase-description-one {
+            border-bottom: 4px solid rgb(240, 240, 240);
+            padding-bottom: 10rem;
+        }
+
+    }
+
+    .image-showcase {
+        @include projectWidth();
+        margin: 5rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 'img1 img2 img3 img4'
+            'img5 img5 img5 img5'
+        ;
+        grid-gap: 20px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .img1 {
+            grid-area: img1;
+        }
+
+        .img2 {
+            grid-area: img2;
+        }
+
+        .img3 {
+            grid-area: img3;
+        }
+
+        .img4 {
+            grid-area: img4;
+        }
+
+        .img5 {
+            grid-area: img5;
+        }
+    }
+
+    .showcase-three {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-five,
+    .showcase-six {
+        @include projectWidth();
+        margin: 0 auto;
+        height: auto;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-five {
+        margin: 5rem auto;
+    }
+
+    .showcase {
+        .showcase-description-four {
+            text-align: center;
+            max-width: 450px;
+            margin: 0 auto;
+
+            span {
+                @include case-content2-sub;
+                margin-bottom: 1.5rem;
+                display: block;
+            }
+
+            h2 {
+                @include case-content2-heading;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                @include project-p;
+            }
+        }
+
+    }
+
+    .showcase-flex {
+
+        margin: 5rem auto;
+        @include flexbox(space-between, center);
+        @include projectWidth();
+
+        .showcase-seven,
+        .showcase-eight {
+            width: 100%;
+            height: 100%;
+            margin: 0 1rem;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .showcase-nine,
+    .showcase-ten {
+
+
+        img {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            display: block;
+        }
+    }
+
+    .showcase-nine {
+        margin-top: 5rem;
+    }
+
+    .showcase-eleven {
+        @include projectWidth();
+        margin: 5rem auto;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-twelve {
+        background: $project-bg1;
+
+        img {
+            width: 100%;
+            height: auto;
+            @include projectWidth();
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    .showcase {
+        .showcase-description-six {
+            @include projectWidth();
+            margin: 0 auto;
+            @include flexbox(space-between, center);
+
+            &__heading {
+                width: 40%;
+
+                span {
+                    @include case-content2-sub;
+                    display: block;
+                    margin-bottom: 1.5rem;
+                }
+
+                h2 {
+                    @include case-content2-heading;
+                    margin-bottom: 1.5rem;
+                }
+
+                p {
+                    @include project-p;
+                }
+
+            }
+
+            &__description {
+                width: 60%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .showcase-thirteen {
+        background: $project-bg2;
+
+        img {
+            width: 100%;
+            height: auto;
+            @include projectWidth();
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    .showcase {
+        .showcase-description-seven {
+            &__heading {
+                text-align: center;
+
+                span {
+                    @include case-content2-sub;
+                    display: block;
+                    margin-bottom: 1.5rem;
+                }
+
+                h2 {
+                    @include case-content2-heading
+                }
+            }
+        }
+    }
+
+    .showcase-fourteen {
+        margin: 8rem 0;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40vh;
+            background: $cs-clr02;
+            z-index: 1;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            @include projectWidth();
+            margin: 0 auto;
+            display: block;
+            position: relative;
+            z-index: 4;
+        }
+    }
+
+    .showcase {
+        .showcase-description-eight {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+
+            p {
+                @include project-p;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    .showcase-fifteen {
+        margin: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-sixteen {
+        @include projectWidth();
+        margin: 10rem auto;
+
+        img {
+            width: 100%;
+            height: 0 auto;
+        }
+    }
+
+    .showcase-seventeen {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .testimonial-projects {
+        @include projectWidth();
+        margin: 10rem auto;
+        @include flexbox(space-between, start);
+
+        &__description {
+            width: 50%;
+
+            h2 {
+                @include testimonial-head;
+                margin-bottom: 2.5rem;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -20px;
+                    left: 0;
+                    width: 70%;
+                    height: 4px;
+                    background: $clr02;
+                }
+
+            }
+
+            p {
+                @include testimonial-cite;
+            }
+        }
+
+        &__author {
+            width: 40%;
+            height: auto;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
+    }
+}

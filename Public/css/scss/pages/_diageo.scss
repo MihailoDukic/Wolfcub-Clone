@@ -1,0 +1,131 @@
+.main-diageo {
+
+    .showcase-one,
+    .showcase-two {
+        width: 100%;
+        height: auto;
+        margin: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-grid {
+        @include projectWidth();
+        margin: 5rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'img1 img2'
+            'img3 img3'
+        ;
+        grid-gap: 40px;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .img1 {
+            grid-area: img1;
+        }
+
+        .img2 {
+            grid-area: img2;
+        }
+
+        .img3 {
+            grid-area: img3;
+        }
+    }
+
+    .showcase-two {
+        position: relative;
+        z-index: 2;
+
+        img {
+            width: 100%;
+            height: auto;
+            @include projectWidth();
+            margin: 5rem auto;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    .showcase-three {
+        margin: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .showcase-four {
+        background: $project-bg3;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            @include projectWidth();
+            margin: 5rem auto;
+        }
+    }
+
+    .showcase-five {
+        max-width: 100%;
+        height: auto;
+        background: $project-bg6;
+        padding-top: .5rem;
+
+        img {
+            width: 50%;
+            height: auto;
+            @include projectWidth();
+            display: block;
+            margin: 5rem auto;
+        }
+    }
+
+    .showcase-grid-diageo {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'img1 img1''img2 img2''img3 img4''img5 img5';
+        margin: 5rem 0;
+        gap: 20px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .img1 {
+            grid-area: img1;
+        }
+
+        .img2 {
+            grid-area: img2;
+        }
+
+        .img3 {
+            grid-area: img3;
+        }
+
+        .img4 {
+            grid-area: img4;
+        }
+
+        .img5 {
+            grid-area: img5;
+        }
+    }
+
+}

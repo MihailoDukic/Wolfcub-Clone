@@ -1,0 +1,93 @@
+.main-avios {
+    .showcase-one {
+        margin: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+
+    .showcase-two {
+        margin: 5rem 0;
+        background: $clr03;
+
+        img {
+            width: 100%;
+            height: auto;
+            @include projectWidth();
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    .showcase-three-flex {
+        @include flexbox(center, center);
+        @include projectWidth();
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 1rem;
+        }
+    }
+
+    .showcase-four {
+        margin: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase-five {
+        margin: 5rem 0;
+        max-width: none;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .showcase--six {
+
+        background: $project-bg3;
+
+        img {
+            width: 100%;
+            @include projectWidth();
+            margin: 5rem auto;
+            display: block;
+            height: auto;
+        }
+    }
+
+    .showcase-seven {
+        img {
+            width: 100%;
+            height: auto;
+            @include projectWidth();
+            margin: 5rem auto;
+            display: block;
+        }
+    }
+
+    .showcase--eight {
+        background: $project-bg3;
+
+        img {
+            width: 100%;
+            @include projectWidth();
+            margin: 5rem auto;
+            display: block;
+            height: auto;
+        }
+    }
+
+
+}

@@ -1,0 +1,281 @@
+.header-global {
+    height: 65vh;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.main {
+    .project-information {
+        @include flexbox(space-between, start);
+        @include projectWidth();
+
+
+
+        &__right-description {
+            width: 45%;
+
+
+            h2 {
+                @include project-heading();
+                margin-bottom: 2rem;
+            }
+
+            p {
+                @include project-p();
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        &__left-info {
+            width: 45%;
+            @include flexbox(end, center);
+            border-top: 4px solid $clr02;
+
+            .info {
+                margin-top: 3rem;
+                margin-left: 8rem;
+
+                li {
+                    padding: 12px 0;
+                    font-weight: lighter;
+                }
+
+                .heading {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .showcase-description-one,
+    .showcase-description-two,
+    .showcase-description-three,
+    .showcase-description-five {
+        @include projectWidth();
+        margin: 0 auto;
+        margin-top: 5rem;
+        @include flexbox(space-between, start);
+
+
+
+        h2 {
+            @include case-content-heading();
+            text-align: center;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+
+        &__description {
+            max-width: 40%;
+            margin: 0 auto;
+
+            p {
+                @include project-p;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    .showcase-description-one {
+        border-bottom: 4px solid rgb(240, 240, 240);
+        padding-bottom: 10rem;
+    }
+
+    .other-works 
+    {
+
+        @include projectWidth();
+        margin: 8rem auto;
+
+        .heading 
+        {
+            @include testimonial-head;
+            padding-bottom: 1.5rem;
+        }
+
+        .works 
+        {
+            @include linkReset(transparent);
+            display: block;
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 1.5rem 0;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color:#090909;
+            &:hover 
+            {
+                margin-left: 1.5rem;
+                color: #090909;
+            }
+        }
+    }
+}
+
+
+
+@media screen and(max-width: 768px) {
+    .main {
+        .project-information {
+            max-width: 100%;
+            flex-direction: column;
+            padding: $padding;
+
+            &__right-description {
+                width: 100%;
+                margin-top: 2rem;
+            }
+
+            &__left-info {
+                width: 100%;
+                margin-left: 0;
+
+                .info {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .showcase-description-one,
+        .showcase-description-two,
+        .showcase-description-three,
+        .showcase-description-five {
+            max-width: 100%;
+            flex-direction: column;
+            flex-wrap: wrap;
+            @include flexbox(start, start);
+            padding: $padding;
+
+            &__heading {
+                margin-bottom: 1.5rem;
+
+                @include case-content-heading();
+                text-align: center;
+                display: inline-block;
+            }
+
+            &__description {
+                max-width: 100%;
+            }
+        }
+
+        .showcase {
+
+            .showcase-description-one,
+            .showcase-description-two,
+            .showcase-description-three,
+            .showcase-description-five,
+            .showcase-description-six {
+                max-width: 100%;
+                flex-direction: column;
+                flex-wrap: wrap;
+                @include flexbox(start, start);
+                padding: $padding;
+
+                &__heading {
+                    margin-bottom: 1.5rem;
+
+                    @include case-content-heading();
+                    text-align: center;
+                    display: inline-block;
+                }
+
+                &__description {
+                    max-width: 100%;
+                }
+            }
+
+            .showcase-description-six {
+                @include flexbox(start, center);
+
+                &__heading {
+                    width: 100%;
+                }
+
+                &__description {
+                    width: 100%;
+                }
+            }
+        }
+
+        .other-works 
+        {
+            .works 
+            {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 500px) {
+    .main {
+        .project-information {
+            max-width: 100%;
+            flex-direction: column;
+            padding: 0 2rem;
+
+            &__right-description {
+                width: 100%;
+                margin-top: 2rem;
+            }
+
+            &__left-info {
+                width: 100%;
+            }
+        }
+
+        .showcase-description-one,
+        .showcase-description-two,
+        .showcase-description-three,
+        .showcase-description-five {
+            max-width: 100%;
+            flex-direction: column;
+            flex-wrap: wrap;
+            @include flexbox(start, start);
+            padding: $padding;
+
+            &__heading {
+                margin-bottom: 1.5rem;
+                display: none;
+                @include case-content-heading();
+                text-align: center;
+                display: inline-block;
+            }
+
+            &__description {
+                max-width: 100%;
+            }
+        }
+
+        .testimonial-projects {
+            flex-direction: column;
+
+
+            &__description,
+            &__author {
+                width: 100%;
+                padding: 0 2rem;
+            }
+
+            &__description {
+                margin-bottom: 2rem;
+
+                h2 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .other-works 
+        {
+            padding: 0 2rem;
+            .works 
+            {
+                font-size: 2rem;
+                
+            }
+        }
+    }
+}

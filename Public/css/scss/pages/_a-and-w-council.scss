@@ -1,0 +1,128 @@
+.main-aw {
+    .showcase-one {
+        margin: 5rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .centered-showcase {
+            @include projectWidth();
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    .showcase-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'img1 img2'
+            'img3 img4'
+        ;
+        grid-gap: 40px;
+        @include projectWidth();
+        margin: 5rem auto;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .img1 {
+            grid-area: img1;
+        }
+
+        .img2 {
+            grid-area: img2;
+        }
+
+        .img3 {
+            grid-area: img3;
+        }
+
+        .img4 {
+            grid-area: img4;
+        }
+    }
+
+    .showcase-centered {
+        @include projectWidth();
+        margin: 5rem auto;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .showcase-grid-two {
+        @include projectWidth();
+        margin: 5rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'img1 img1'
+            'img2 img3'
+        ;
+        grid-gap: 40px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .img1 {
+            grid-area: img1;
+        }
+
+        .img2 {
+            grid-area: img2;
+        }
+
+        .img3 {
+            grid-area: img3;
+        }
+    }
+
+    .showcase-three {
+        margin: 5rem 0;
+
+        img {
+            display: block;
+        }
+    }
+
+    .showcase-flex {
+        @include projectWidth();
+        margin: 5rem auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            margin: 0 1rem;
+        }
+    }
+
+    .showcase-four {
+        @include projectWidth();
+        margin: 5rem auto;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .showcase-five {
+        width: 100%;
+        max-width: none;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

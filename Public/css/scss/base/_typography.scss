@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100,300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+
+/* Typography for home page */
+
+/* NAVIGATION */
+
+@mixin menu-link() {
+    font-size: 45px;
+    line-height: 60px;
+    color: #fff;
+    font-weight: bold;
+}
+
+@mixin menu-description {
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 300;
+    color: #c7d3ef;
+}
+
+@mixin menu-title {
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: bold;
+    color: #6d7da3;
+}
+
+
+/* Navigation Showcase */
+
+@mixin showcase-heading() {
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: normal;
+    color: #282828;
+}
+
+@mixin showcase-link() {
+    font-weight: lighter;
+    @include linkReset(#fff);
+    font-size: 20px;
+    line-height: 20px;
+    display: block;
+}
+
+/* HOME ABOUT */
+
+@mixin home-about-title() {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 400;
+    color: #fff;
+}
+
+@mixin home-about-description($fw) {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: $fw;
+    color: #fff;
+}
+
+@mixin home-about-description($fw) {
+    font-size: 22px;
+    line-height: 35px;
+    font-weight: $fw;
+    color: #fff;
+}
+
+/* SLIDER */
+
+@mixin slider-heading() {
+    font-size: 65px;
+    line-height: 65px;
+    color: #282828;
+    font-weight: bold;
+}
+
+@mixin slider-p() {
+    font-size: 20px;
+    margin-top: .5rem;
+    color: #282828;
+    font-weight: bold;
+}
+
+/* DESIGN SPRINTS */
+
+@mixin sprint-heading() {
+    font-size: 90px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+
+@mixin sprint-heading-sub() {
+    font-size: 38px;
+    font-weight: normal;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+@mixin sprint-p() {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+/* OFFER */
+
+@mixin offer-heading() {
+    font-size: 27px;
+    font-weight: bold;
+    color: #282828;
+}
+
+@mixin offer-sub-heading() {
+    font-size: 15px;
+    font-weight: 500;
+    color: #282828;
+}
+
+
+@mixin offer-p() {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.2;
+
+    letter-spacing: 1px;
+    color: #282828;
+}
+
+/* ABOUT WOLF */
+
+@mixin aboutwolf-sub() {
+    color: #00ffce;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+@mixin aboutwolf-heading() {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+/* Lets Talk */
+
+@mixin lets-talk-heading() {
+    font-size: 55px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+
+@mixin lets-talk-p {
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+
+@mixin footer-p() {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #090909;
+}
+
+
+@mixin footer-heading() {
+    color: #090909;
+    font-weight: bold;
+    line-height: 28px;
+    font-size: 18px;
+
+}
+
+@mixin footer-link() {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    color: #090909;
+    @include linkReset(#090909);
+}
+
+/*************************** ABOUT US PAGE ******************************/
+
+@mixin about-header-showcase() {
+    font-size: 90px;
+    line-height: 100px;
+    font-weight: bold;
+    color: $clr01;
+    text-align: center;
+    padding: 0;
+}
+
+@mixin team-sub() {
+    font-size: 18px;
+    color: #5cc096;
+    line-height: normal;
+}
+
+@mixin team-heading() {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 63px;
+    color: #d9e6ff;
+}
+
+@mixin team-p($fw) {
+    font-size: 22px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: $fw;
+}
+
+@mixin team-h3() {
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* TEAM DESCRIPTION */
+
+@mixin team-desc-heading() {
+    font-size: 32px;
+    color: #854ff6;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+@mixin team-desc-p() {
+    font-size: 20px;
+    line-height: 30px;
+    color: #282828;
+    font-weight: lighter;
+}
+
+/* THE PACK */
+
+@mixin pack-heading() {
+    font-size: 150px;
+    color: #0d234a;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+
+@mixin team-quote() {
+    font-size: 45px;
+    color: #431578;
+    font-weight: 400;
+}
+
+@mixin team-quote-author() {
+    font-size: 20px;
+    color: #5cc096;
+    font-weight: 400;
+}
+
+@mixin team-quote-p($fw) {
+    font-size: 24px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: $fw;
+}
+
+/* Testimonial */
+
+@mixin testimonial-heading() {
+    color: #282828;
+    font-size: 37px;
+    font-weight: bold;
+}
+
+@mixin testimonial-p() {
+    color: #282828;
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+@mixin testimonial-auth() {
+    color: #282828;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/************************ WHAT WE DO PAGE ****************************/
+
+@mixin wwd-heading() {
+    font-size: 55px;
+    letter-spacing: 2px;
+    color: #0d234a;
+    font-weight: bold;
+}
+
+@mixin design-p($fw) {
+    font-size: 22px;
+    line-height: 35px;
+    color: #282828;
+    font-weight: $fw;
+}
+
+@mixin design-service-heading() {
+    font-size: 27px;
+    line-height: 29px;
+    color: #282828;
+    font-weight: bold;
+}
+
+@mixin brand-desc() {
+    font-size: 35px;
+    line-height: 45px;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+/********************** CASE STUDIES PAGE ***********************************/
+
+@mixin cs-header-sub {
+    font-size: 18px;
+    color: #a3a4a9;
+    font-weight: lighter;
+}
+
+@mixin cs-header-showcase {
+    font-size: 90px;
+    color: #431578;
+    font-weight: normal;
+}
+
+@mixin cs-span($clr) {
+    font-size: 15px;
+    font-weight: 400;
+    color: $clr;
+}
+
+@mixin cs-header($clr) {
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 55px;
+    font-weight: bold;
+    color: $clr;
+}
+
+
+/************************ HOW WE WORK PAGE ****************************/
+
+@mixin hww-showcase-heading {
+    font-size: 90px;
+    color: #431578;
+    line-height: 100px;
+    font-weight: bold;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+@mixin hww-showcase-p-bold {
+    font-size: 27px;
+    line-height: 48px;
+    font-weight: bold;
+    color: #282828;
+}
+
+@mixin hww-showcase-p-light {
+    font-size: 27px;
+    line-height: 48px;
+    font-weight: 300;
+    color: #282828;
+}
+
+@mixin hww-showcase-sub-heading {
+    font-size: 35px;
+    font-weight: bold;
+    color: #431578;
+}
+
+/*********************** HOW WE WORK *************************************/
+
+@mixin hww-heading($clr) {
+    color: $clr;
+    font-size: 55px;
+    font-weight: bold;
+    font-family: ''
+}
+
+@mixin hww-p-bold($clr) {
+    color: $clr;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+@mixin hww-p-light($clr) {
+    color: $clr;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 300;
+}
+
+@mixin hww-list($clr) {
+    font-size: 20px;
+    font-weight: 300;
+    color: $clr;
+}
+
+@mixin hww-width() {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* JOURNAL PAGE */
+
+@mixin filters() {
+    font-size: 24px;
+    color: #696868;
+    line-height: 34px;
+    font-weight: lighter;
+}
+
+@mixin blog-heading() {
+    font-size: 32px;
+    color: #0a132a;
+    line-height: 42px;
+    font-weight: bold;
+}
+
+@mixin blog-author() {
+    font-size: 20px;
+    color: #0a132a;
+    font-weight: normal;
+}
+
+/********************************* THE WOLF ****************************************/
+
+@mixin the-wolf-showcase-sub() {
+    font-size: 32px;
+    font-weight: bold;
+    color: #12e1c9;
+}
+
+@mixin the-wolf-showcase-heading() {
+    font-size: 90px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+@mixin the-wolf-showcase-p() {
+    font-size: 55px;
+    font-weight: normal;
+    line-height: 1.2;
+    color: #fff;
+}
+
+/*********************** WOLF STORY ********************************************************/
+
+@mixin wolfstory-heading() {
+    color: #ddd;
+    font-size: 49px;
+    line-height: 57px;
+    font-weight: bold;
+}
+
+
+@mixin wolfstory-sub() {
+    color: #ddd;
+    font-size: 20px;
+    line-height: normal;
+    font-weight: normal;
+}
+
+@mixin wolfstory-p() {
+    color: #ddd;
+    font-size: 20px;
+    line-height: normal;
+    font-weight: lighter;
+}
+
+/********************* CONTACT PAGE ***********************/
+
+@mixin contact-links() {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: normal;
+}
+
+@mixin contact-details() {
+    font-size: 30px;
+    font-weight: normal;
+    line-height: normal;
+    color: #fff;
+}
+
+@mixin contact-sub() {
+    font-size: 25px;
+    font-weight: lighter;
+    line-height: normal;
+    color: #fff;
+}
+
+
+/****************** IAN FLEMMING PROJECT *****************************************/
+
+@mixin projectWidth() {
+    max-width: 1200px;
+}
+
+@mixin project-heading() {
+    font-size: 40px;
+    line-height: 50px;
+    color: #0d234a;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin project-p {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: lighter;
+    color: #777272;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin case-content-heading {
+    font-size: 33px;
+    line-height: 45px;
+    color: #0d234a;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+@mixin case-content2-sub {
+    font-size: 13px;
+    line-height: normal;
+    color: #5cc096;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin case-content2-heading {
+    font-size: 25px;
+    line-height: 35px;
+    color: #0d234a;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin testimonial-head {
+    font-size: 44px;
+    line-height: 55px;
+    color: #282828;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin testimonial-cite {
+    font-size: 16px;
+    line-height: normal;
+    color: #e9e9e9;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin slider-head() {
+    font-size: 18px;
+    color: #868686;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+@mixin showcase-header {
+    font-size: 19.89px;
+    color: #282828;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: -35px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #d9d9d9;
+    }
+}

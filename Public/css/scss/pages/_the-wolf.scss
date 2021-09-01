@@ -1,0 +1,392 @@
+.header-wolf {
+    width: 100%;
+    height: auto;
+    background-attachment: none;
+    position: relative;
+    background: $clr05;
+
+
+    .top-showcase {
+        @include maxWidth();
+        text-align: center;
+        padding-bottom: 10rem;
+
+        span {
+            @include the-wolf-showcase-sub();
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+
+        img {
+            width: 50%;
+            height: auto;
+            margin: 5rem 0;
+        }
+
+        h2 {
+            @include the-wolf-showcase-heading();
+            margin-bottom: 1rem;
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 45%;
+                height: 3px;
+                background: $clr03;
+                display: inline-block;
+            }
+        }
+
+        p {
+            @include the-wolf-showcase-p();
+            margin-bottom: 1rem;
+
+            span {
+                display: inline-block;
+                color: $clr02;
+            }
+        }
+    }
+
+    .wolf-story {
+        position: relative;
+
+        .story {
+            width: 100%;
+            height: auto;
+            position: relative;
+            display: block;
+            user-select: none;
+        }
+
+        .tree-five {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .tree-four {
+            position: absolute;
+            bottom: 22%;
+            right: 0;
+            opacity: 0;
+            width: 40%;
+        }
+
+        .tree-three {
+            position: absolute;
+            bottom: 20%;
+            left: 0;
+            opacity: 0;
+            width: 40%;
+        }
+
+        .tree-two {
+            position: absolute;
+            bottom: 36%;
+            right: 0;
+            opacity: 0;
+            width: 50%;
+        }
+
+        .tree-one {
+            position: absolute;
+            top: 23%;
+            left: 0;
+            opacity: 0.2;
+            width: 55%;
+            opacity: 0;
+        }
+
+        .wolf-left {
+            position: absolute;
+            left: -10%;
+            bottom: 42%;
+            width: 17%;
+        }
+
+        .wolf-right {
+            position: absolute;
+            right: -10%;
+            bottom: 30%;
+            width: 17%;
+        }
+
+        .wolf-mid {
+            position: absolute;
+            top: 47%;
+            left: 62%;
+            width: 8%;
+            height: auto;
+        }
+
+        .bottom-one,
+        .bottom-two {
+            position: absolute;
+            bottom: 14%;
+            left: 56%;
+            width: 10%;
+            height: auto;
+        }
+
+        .bottom-one {
+            left: 53%;
+        }
+
+        .bottom-two {
+            left: 58%;
+        }
+
+        .content {
+
+            .container-one,
+            .container-two,
+            .container-three {
+                position: absolute;
+                top: 15%;
+                left: 0;
+                width: 100%;
+                background: #1b1d1f;
+                opacity: 0;
+                margin-top: -2rem;
+
+                .content {
+                    @include maxWidthInner();
+                    text-align: center;
+                    padding: 6rem 0;
+
+                    h2 {
+                        @include wolfstory-heading();
+                        margin-bottom: 1rem;
+                    }
+
+                    span {
+                        @include wolfstory-sub();
+                        margin-bottom: 1rem;
+                        display: block;
+                    }
+
+                    p {
+                        @include wolfstory-p();
+                    }
+                }
+            }
+
+            .container-two {
+                top: 45%;
+                left: 0;
+                width: 50%;
+                padding: 0 15px;
+            }
+
+            .container-three {
+                top: 70%;
+                left: 50%;
+                width: 50%;
+                padding: 0 15px;
+            }
+
+        }
+
+    }
+
+
+
+}
+
+
+
+
+
+.main-wolf {
+    .letsTalk-wolfabout {
+        background: $clr08;
+        clip-path: none;
+        margin-top: -9rem;
+    }
+}
+
+
+/* Breakpoints */
+
+@media screen and(max-width: 1000px) {
+    .header-wolf {
+
+        padding: 0;
+        margin: 0;
+
+        .wolf-story {
+            .content {
+
+                .container-one,
+                .container-two,
+                .container-three {
+                    padding: $padding;
+
+                    .content {
+                        h2 {
+                            font-size: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and(max-width: 768px) {
+    .header-wolf {
+
+        .header__top-content {
+            padding: 0 2rem;
+        }
+
+        .top-showcase {
+            padding-bottom: 5rem;
+
+            .content {
+                padding: $padding;
+                padding-bottom: 0rem;
+
+                h2 {
+                    font-size: 4rem;
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .wolf-story {
+            padding: 0;
+
+            .content {
+
+                .container-one,
+                .container-two,
+                .container-three {
+                    padding: $padding;
+                    width: 100%;
+                    left: 0;
+                    padding: 0;
+
+                    .content {
+                        padding: 3rem;
+
+                        h2 {
+                            font-size: 2rem;
+                        }
+
+                        h2,
+                        span,
+                        p {
+                            margin-bottom: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and(max-width: 500px) {
+    .header-wolf {
+
+        .top-showcase {
+            padding-bottom: 5rem;
+
+
+            .content {
+                padding: 0 2rem;
+                padding-bottom: 0rem;
+
+                text-align: left;
+
+                span {
+                    text-align: center;
+                }
+
+                h2 {
+                    font-size: 3rem;
+                    text-align: center;
+
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+
+        .wolf-story {
+            padding: 0;
+
+            .content {
+
+                .container-one,
+                .container-two,
+                .container-three {
+                    padding: $padding;
+                    width: 100%;
+                    left: 0;
+                    padding: 0;
+                    text-align: left;
+
+
+
+                    .content {
+                        text-align: left;
+                        padding: 1rem 2rem;
+                        opacity: 1;
+
+                        h2 {
+                            font-size: 1.5rem;
+                            margin-bottom: 0;
+                        }
+
+                        h2,
+                        span,
+                        p {
+                            margin-bottom: 0.5;
+                            text-align: left;
+                        }
+                    }
+                }
+
+                .container-one {
+                    top: 0;
+                }
+
+                .container-two {
+                    top: 35%;
+                }
+
+                .container-three {
+                    top: 65%;
+                }
+
+            }
+        }
+    }
+}

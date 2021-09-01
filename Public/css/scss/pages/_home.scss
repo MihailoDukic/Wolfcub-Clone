@@ -1,0 +1,276 @@
+/* Home Page */
+
+.main {
+
+    /* Home About */
+    .home-about {
+        @include maxWidth();
+        background: $clr02;
+        height: auto;
+        margin-top: -4rem;
+
+        &__content {
+            @include flexbox(space-between, center);
+            padding: 6rem 6rem;
+
+            &__left-title {
+                width: 45%;
+                align-self: start;
+
+                h2 {
+                    @include home-about-title();
+                }
+            }
+
+            &__right-description {
+                width: 45%;
+
+                p {
+                    @include home-about-description(normal);
+                    margin-bottom: 2rem;
+                }
+
+                p:nth-child(2) {
+                    @include home-about-description(bold);
+                }
+
+                .link {
+                    @include button($clr01, #fff, transparent, 3px solid #fff);
+                }
+            }
+        }
+    }
+
+
+    /* Offer */
+
+    .offer {
+        .heading {
+            @include global-heading();
+            text-align: center;
+            margin-top: 10rem;
+
+        }
+
+        &__container {
+            @include maxWidth();
+            margin: 5rem auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 'b1 b2''b4 b3''b5 b6';
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+
+            .box {
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                }
+
+                .link {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    @include linkReset($project-bg4);
+
+
+                }
+
+                .content {
+                    span {
+                        @include offer-sub-heading();
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        color: $cs-clr02;
+                    }
+
+                    p {
+                        @include offer-p();
+                        padding: 2rem 0;
+
+                    }
+
+
+                }
+
+
+
+            }
+
+            .box-one {
+                grid-area: b1;
+            }
+
+            .box-two {
+                grid-area: b2;
+            }
+
+            .box-three {
+                grid-area: b3;
+            }
+
+            .box-four {
+                grid-area: b4;
+            }
+
+            .box-five {
+                grid-area: b5;
+            }
+
+            .box-six {
+                grid-area: b6;
+            }
+
+        }
+
+
+
+        .offer-link {
+            text-align: center;
+
+            .link {
+
+                @include button($clr02, $clr02, $clr02, 3px solid $clr02);
+                display: inline-block;
+                @include linkReset(#fff);
+                text-align: center;
+            }
+        }
+
+
+    }
+
+    /* Brands */
+
+    .brands {
+        @include maxWidth();
+        margin-bottom: 4rem;
+
+        .heading {
+            @include global-heading();
+            margin: 5rem 0;
+            text-align: center;
+        }
+
+        &__content {
+            width: 100%;
+            text-align: center;
+
+            img {
+                width: 300px;
+                height: auto;
+            }
+        }
+    }
+}
+
+
+/* Breakpoints */
+
+@media screen and (max-width: 768px) {
+    .main {
+        .home-about {
+            margin-top: 0;
+
+            &__content {
+                flex-direction: column;
+                padding: 4rem $padding;
+                @include flexbox(center, center);
+                margin-top: 0;
+
+                &__left-title,
+                &__right-description {
+                    width: 100%;
+                    padding: 0rem 4rem;
+                }
+
+                &__left-title {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        .offer {
+            .heading {
+                font-size: 3rem;
+                margin: 4.5rem 0;
+            }
+
+            &__container {
+                grid-template-columns: 1fr;
+                grid-template-areas: 'b1''b2''b3''b4''b5''b6';
+                padding: $padding;
+                margin: 0;
+
+                .box {
+                    .content {
+                        span {
+                            font-size: 2rem;
+                            font-weight: bold;
+                        }
+
+                        p {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .brands {
+            .heading {
+                font-size: 3rem;
+            }
+        }
+    }
+
+
+}
+
+@media screen and(max-width: 500px) {
+    .main {
+        .home-about {
+            margin-top: -6rem;
+
+            &__content {
+
+                &__left-title,
+                &__right-description {
+                    padding: 0 2rem;
+
+                }
+            }
+        }
+
+
+        .offer {
+            .heading {
+                font-size: 3rem;
+            }
+
+            &__container {
+                grid-template-columns: 1fr;
+                grid-template-areas: 'b1''b2''b3''b4''b5''b6';
+                padding: 0 2rem;
+
+                .box {
+                    .content {
+                        span {
+                            font-size: 2rem;
+                            font-weight: bold;
+                        }
+
+                        p {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,274 @@
+/* Common Resets */
+
+/* Showcase Heading */
+.header-wwd {
+    background: $clr05;
+    height: auto;
+
+    .wwd-showcase {
+        h2 {
+            @include about-header-showcase();
+            margin: 5rem 0;
+            color: #fff;
+            padding-bottom: 6rem;
+        }
+    }
+}
+
+/* WWD MAIN CONTENT */
+
+.main {
+    padding-top: 1.5rem;
+
+    .digitalDesign,
+    .brandDesign,
+    .experienceDesign {
+        .heading {
+            @include wwd-heading();
+            text-align: center;
+            margin: 5rem 0;
+        }
+
+        &__content {
+            @include maxWidthInner();
+            padding: 3rem 0;
+
+            p:nth-child(1) {
+                @include design-p(bold);
+                margin-bottom: 1.5rem;
+            }
+
+            p:nth-child(2) {
+                @include design-p(lighter);
+            }
+        }
+
+        &__services {
+            @include flexbox(space-between, center);
+            @include maxWidthInner();
+            text-align: center;
+            padding-top: 3rem;
+
+            img {
+                display: inline-block;
+                width: 90px;
+                text-align: center;
+                height: auto;
+            }
+
+            span {
+                display: block;
+                margin: .5rem 0;
+                color: $clr07;
+            }
+
+            h2 {
+                @include design-service-heading();
+                line-height: 1.4;
+            }
+        }
+    }
+
+    /* WWD SHOWCASE */
+
+    .brand-showcase {
+        width: 100%;
+        height: 35vh;
+        background-size: cover;
+        background-position: center center;
+        margin-top: 5rem;
+
+        &__content {
+            @include flexbox(center, start);
+            flex-direction: column;
+            height: 100%;
+            @include maxWidth();
+            position: relative;
+
+            .arrow-top {
+                position: absolute;
+                top: -5%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .brand {
+                width: 250px;
+                height: auto;
+                position: absolute;
+                right: 0;
+                bottom: 5%;
+            }
+
+            h2 {
+                @include brand-desc();
+            }
+
+            .link {
+                @include showcase-link();
+                margin-top: 1.5rem;
+                @include flexbox(start, center);
+                display: inline-block;
+
+                img {
+                    width: 28px;
+                    height: auto;
+                    margin-left: .5rem;
+                }
+
+                &:hover img {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+    /* Testimonial */
+
+    .testimonial-wwd {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .header-wwd {
+        .wwd-showcase {
+            h2 {
+                @include about-header-showcase();
+                margin: 0rem 0;
+                color: #fff;
+
+            }
+        }
+    }
+
+    .main-wwd {
+
+        .digitalDesign,
+        .brandDesign,
+        .experienceDesign,
+        .brand-showcase {
+            padding: $padding;
+            padding-top: 0;
+
+            .heading {
+                margin: 2rem 0;
+                text-align: left;
+            }
+
+            &__services {
+
+                flex-wrap: wrap;
+                text-align: center;
+
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .header-wwd {
+        .wwd-showcase {
+            h2 {
+                @include about-header-showcase();
+                margin: 0rem 0;
+                color: #fff;
+                font-size: 5rem;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
+    .main-wwd {
+
+        .digitalDesign,
+        .brandDesign,
+        .experienceDesign,
+        .brand-showcase {
+            padding: 0 2rem
+        }
+
+        .brandDesign,
+        .experienceDesign {
+            .heading {
+                padding-top: 2rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .header-wwd {
+        .wwd-showcase {
+            h2 {
+                @include about-header-showcase();
+                margin: 0rem 0;
+                color: #fff;
+                font-size: 3rem;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
+    .main-wwd {
+
+        .digitalDesign,
+        .brandDesign,
+        .experienceDesign,
+        .brand-showcase {
+            padding: 0 2rem;
+
+            .heading {
+                font-size: 2.5rem;
+            }
+        }
+
+        .digitalDesign {
+            .heading {
+                margin-top: -2rem;
+            }
+        }
+
+        .digitalDesign,
+        .brandDesign,
+        .experienceDesign {
+            &__services {
+                @include flexbox(center, center);
+
+                img {
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    height: auto;
+                }
+
+                h2 {
+                    @include design-service-heading();
+                    line-height: 1.4;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .brand-showcase {
+            &__content {
+                .brand {
+                    width: 150px;
+                    height: auto;
+                    position: absolute;
+                    right: 0;
+                    bottom: 5%;
+                }
+
+                h2 {
+                    @include brand-desc();
+                    font-size: 2rem;
+                }
+
+            }
+        }
+    }
+}
